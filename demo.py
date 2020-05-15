@@ -1,4 +1,4 @@
-from pylabon import Report
+from pyLabOn import Report
 
 # Name can be anything you like;
 # you may specific path if the report files should not be generated in ./
