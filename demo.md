@@ -4,6 +4,8 @@ Hello, pyLabOn
 
 ## SubParagraph
 
+There is a Table
+
 |index|
 | :----: |
 |0|
@@ -16,7 +18,5 @@ Hello, pyLabOn
 |7|
 |8|
 |9|
-
-There is a Table
 
 
