@@ -1,4 +1,4 @@
-import PlasticMetal.pyLabOn as labon
-
+from pyLabOn import Report
+import pyLabOn
 
 
