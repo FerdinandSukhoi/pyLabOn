@@ -4,6 +4,6 @@
 
 # PlasticMetal.pyLabOn
 
-**Under development**
+![GitHub](https://img.shields.io/github/license/Plastic-Metal/pyLabOn?style=flat-square)
 
 Light-weight tool to generate markdown-formatted lab reports. For python.

@@ -1,4 +1,4 @@
-from pyLabOn import Report
+from pylabon import Report
 
 my_report=Report("demo")
 
