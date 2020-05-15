@@ -8,14 +8,14 @@
 
 @Modify Time      @Author    @Version    @Description
 ------------      -------    --------    -----------
-2020-5-15   Ferdinand Sukhoi      0.1.1   Light-weight tool to generate markdown-formatted lab reports.
+2020-5-15   Ferdinand Sukhoi      0.1.4   Light-weight tool to generate markdown-formatted lab reports.
 """
 
 import pypandoc
 from os.path import join
 
 __all__ = ['Report', 'ReportParagraph', 'ReportPlainContent', 'ReportTable']
-__version__ = '0.1.1'
+__version__ = '0.1.4'
 __author__ = 'Ferdinand Sukhoi'
 
 
