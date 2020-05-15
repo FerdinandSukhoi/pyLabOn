@@ -15,7 +15,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "pylabon",
-    version = "0.1.4",
+    version = "0.1.4.1",
     keywords = ["markdown", "Plastic-Metal"],
     description = "To generate markdown-formatted lab reports.",
     long_description = "Light-weight tool to generate markdown-formatted lab reports. For python.",
