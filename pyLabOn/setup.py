@@ -8,14 +8,14 @@
 
 @Modify Time      @Author    @Version    @Description
 ------------      -------    --------    -----------
-2020-5-15   Ferdinand Sukhoi      0.1.0   Light-weight tool to generate markdown-formatted lab reports.
+2020-5-15   Ferdinand Sukhoi      0.1.1   Light-weight tool to generate markdown-formatted lab reports.
 """
 
 from setuptools import setup, find_packages
 
 setup(
     name = "pyLabOn",
-    version = "0.1.0",
+    version = "0.1.1",
     keywords = ["markdown", "Plastic-Metal"],
     description = "To generate markdown-formatted lab reports.",
     long_description = "Light-weight tool to generate markdown-formatted lab reports. For python.",

@@ -8,13 +8,14 @@
 
 @Modify Time      @Author    @Version    @Description
 ------------      -------    --------    -----------
-2020-5-15   Ferdinand Sukhoi      0.1.0   Light-weight tool to generate markdown-formatted lab reports.
+2020-5-15   Ferdinand Sukhoi      0.1.1   Light-weight tool to generate markdown-formatted lab reports.
 """
 
 import pypandoc
+from os.path import join
 
 __all__ = ['Report', 'ReportParagraph', 'ReportPlainContent', 'ReportTable']
-__version__ = '0.1'
+__version__ = '0.1.1'
 __author__ = 'Ferdinand Sukhoi'
 
 
@@ -45,7 +46,6 @@ class ReportPlainContent(ReportContent):
         """
         initial a plain content with content represented by the class
         :param content: content represented by the class
-        :type content: str
         """
         super().__init__()
         self.content = content
@@ -55,7 +55,7 @@ class ReportPlainContent(ReportContent):
         get the markdown-expression of this content
         :return: content represented by the class
         """
-        return self.content + '\n'
+        return str(self.content) + '\n'
 
 
 class ReportTable(ReportContent):
@@ -72,8 +72,8 @@ class ReportTable(ReportContent):
         :param headers: headers of the Table
         :param data: data of the table
         :param align align setting of the table:Left=-1,Right=1,Central(default)=0;
-        :type headers list[str]
-        :type data list[list[str]]
+        :type headers list
+        :type data list[list]
         :type align: list[int] or int
         """
         super().__init__()
@@ -90,7 +90,7 @@ class ReportTable(ReportContent):
         r = '|'
         width = len(self.Headers)
         for header in self.Headers:
-            r += header + "|"
+            r += str(header) + "|"
 
         r += '\n|'
         for align in self.Align:
@@ -119,7 +119,6 @@ class ReportParagraph(ReportContent):
         :param level: Title-level
         :param title: Title
         :type level: int
-        :type title str
         """
         super().__init__()
         self.SubContents = []
@@ -131,7 +130,7 @@ class ReportParagraph(ReportContent):
         get the markdown-expression of this content
         :return: content represented by the class
         """
-        r = '#' * self.Level + ' ' + self.Title + '\n\n'
+        r = '#' * self.Level + ' ' + str(self.Title) + '\n\n'
         for subContent in self.SubContents:
             r += str(subContent) + '\n'
 
@@ -193,8 +192,8 @@ class Report(ReportParagraph):
         :type title str
         """
         super().__init__(1, title)
-        self.MarkdownFilePath = path + '/' + title + '.md'
-        self.PDFPath = path + '/' + title + '.pdf'
+        self.MarkdownFilePath = join(path,title+".md")
+        self.PDFPath = join(path,title+".pdf")
 
     def save_to_file(self):
         """
