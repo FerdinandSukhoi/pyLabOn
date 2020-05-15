@@ -208,7 +208,7 @@ class Report(ReportParagraph):
         Save Markdown and Compile the file to PDF
         :param engine: engine used to compile pdf
         :param font: main font of the pdf
-        :param extra_args: extra arguments for pandoc
+        :param template: tex template for the PDF
         """
         self.save_to_file()
         extra_args=[]

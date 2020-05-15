@@ -22,6 +22,7 @@ sub_para.add_plain_content("There is a Table")
 sub_para.add_table(["index"],[[i] for i in range(0,10)])
 
 # This command generates .md to my_report.MarkdownFilePath, and .pdf to my_report.PDFPath
+# You can customize your engine, font and template
 # If you just want a Markdown file, use my_report.save_to_file() instead
 my_report.compile()
 
