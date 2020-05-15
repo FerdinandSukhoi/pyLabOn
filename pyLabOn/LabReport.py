@@ -203,7 +203,7 @@ class Report(ReportParagraph):
         file.write(str(self))
         file.close()
 
-    def compile(self, engine='', font='',extra_args=[]):
+    def compile(self, engine='', font='', template=''):
         """
         Save Markdown and Compile the file to PDF
         :param engine: engine used to compile pdf
@@ -211,10 +211,13 @@ class Report(ReportParagraph):
         :param extra_args: extra arguments for pandoc
         """
         self.save_to_file()
-        if font!='':
-            extra_args.append('mainfont='+font)
+        extra_args=[]
+        if template!='':
+            extra_args.append('--template=pm-template.latex'+template)    
         if engine!='':
             extra_args.append('--pdf-engine='+engine)
+        if font!='':
+            extra_args.append('-V mainfont="'+font+'"')
 
         pypandoc.convert_file(self.MarkdownFilePath, 'pdf', outputfile=self.PDFPath,
                               extra_args=extra_args)
