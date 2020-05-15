@@ -6,7 +6,14 @@
 
 ![PyPI](https://img.shields.io/pypi/v/pylabon?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Plastic-Metal/pyLabOn?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Plastic-Metal/pyLabOn?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Plastic-Metal/pyLabOn/deploy?style=flat-square)
+![PyPI - Format](https://img.shields.io/pypi/format/pylabon?style=flat-square)
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/pylabon?style=flat-square)
+![PyPI - Implementation](https://img.shields.io/pypi/implementation/pylabon?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/Plastic-Metal/pyLabOn?style=flat-square)
+![GitHub code size](https://img.shields.io/github/languages/code-size/Plastic-Metal/pyLabOn?style=flat-square)
+=
 
 [View at PyPI](https://pypi.org/project/pylabon/)
 
